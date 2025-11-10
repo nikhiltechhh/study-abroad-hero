@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +35,23 @@ const Header = () => {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2 text-primary font-bold text-xl md:text-2xl hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-90 transition-opacity group"
           >
-            <GraduationCap className="h-7 w-7 md:h-8 md:w-8" />
-            <span>EduGlobal</span>
+            <div className="relative">
+              <img 
+                src={logo} 
+                alt="EduGlobal Logo" 
+                className="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-primary font-bold text-lg md:text-xl leading-tight">
+                EduGlobal
+              </span>
+              <span className="text-xs text-muted-foreground italic hidden sm:block">
+                Your Gateway to Success
+              </span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
