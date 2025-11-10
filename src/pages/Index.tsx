@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Services from "@/components/Services";
+import Choose from "@/components/Choose";
+import Footer from "@/components/Footer";
+
 
 const Index = () => {
   return (
@@ -8,6 +12,10 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
+      <Services />
+      <Choose />
+      <Footer />
+     
     </div>
   );
 };

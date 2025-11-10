@@ -16,9 +16,11 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "Services", href: "#services" },
+     { label: "Home", href: "/" },
     { label: "About", href: "#about" },
-    { label: "Success Stories", href: "#stories" },
+    { label: "Services", href: "#services" },
+    { label: "Destinations", href: "/Countries" },
+    { label: "Blog", href: "/Blog" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -39,7 +41,7 @@ const Header = () => {
           >
             <div className="relative">
               <img 
-                src={logo} 
+                src="https://i.ibb.co/5m6X2q0/Global-Pathway-Overseas-Logo-removebg-preview.png" 
                 alt="EduGlobal Logo" 
                 className="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform group-hover:scale-105"
               />
@@ -48,12 +50,12 @@ const Header = () => {
               <span className={`font-bold text-lg md:text-xl leading-tight transition-colors ${
                 isScrolled ? "text-primary" : "text-white"
               }`}>
-                EduGlobal
+                Global Pathway Overseas
               </span>
               <span className={`text-xs italic hidden sm:block transition-colors ${
                 isScrolled ? "text-muted-foreground" : "text-white/70"
               }`}>
-                Your Gateway to Success
+                Your Dreams Our Priority
               </span>
             </div>
           </a>
@@ -74,7 +76,8 @@ const Header = () => {
                 }`}></span>
               </a>
             ))}
-            <Button className="bg-gradient-to-r from-accent to-accent-light hover:shadow-xl transition-all duration-300">
+         <Button className="bg-gradient-to-r from-[#143c6e] to-[#003366] hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white">
+
               Get Started
             </Button>
           </div>
@@ -124,9 +127,10 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="w-full bg-gradient-to-r from-accent to-accent-light hover:shadow-xl transition-all duration-300">
+            <Button className="w-full bg-gradient-to-r from-[#143c6e] to-[#003366] hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white">
               Get Started
             </Button>
+
           </div>
         </div>
       </nav>
