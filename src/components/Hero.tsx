@@ -1,8 +1,54 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, CheckCircle, MapPin, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const [studentCount, setStudentCount] = useState(0);
+  const [countryCount, setCountryCount] = useState(0);
+  const [successRate, setSuccessRate] = useState(0);
+
+  useEffect(() => {
+    // Animate student count
+    const studentInterval = setInterval(() => {
+      setStudentCount((prev) => {
+        if (prev >= 500) {
+          clearInterval(studentInterval);
+          return 500;
+        }
+        return prev + 10;
+      });
+    }, 20);
+
+    // Animate country count
+    const countryInterval = setInterval(() => {
+      setCountryCount((prev) => {
+        if (prev >= 25) {
+          clearInterval(countryInterval);
+          return 25;
+        }
+        return prev + 1;
+      });
+    }, 50);
+
+    // Animate success rate
+    const rateInterval = setInterval(() => {
+      setSuccessRate((prev) => {
+        if (prev >= 98) {
+          clearInterval(rateInterval);
+          return 98;
+        }
+        return prev + 2;
+      });
+    }, 30);
+
+    return () => {
+      clearInterval(studentInterval);
+      clearInterval(countryInterval);
+      clearInterval(rateInterval);
+    };
+  }, []);
+
   const features = [
     "Expert Counselling",
     "Visa Assistance",
@@ -76,36 +122,36 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white transition-all duration-300 text-base md:text-lg px-8 md:px-10 py-6 md:py-7 backdrop-blur-sm"
+              className="border-2 border-white text-white bg-white/5 hover:bg-white hover:text-primary transition-all duration-300 text-base md:text-lg px-8 md:px-10 py-6 md:py-7 backdrop-blur-sm"
             >
               Book Free Consultation
             </Button>
           </div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 pt-8 md:pt-12 max-w-3xl mx-auto animate-fade-in delay-700">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
+          {/* Stats Section - No Boxes */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 pt-8 md:pt-12 max-w-3xl mx-auto animate-fade-in delay-700">
+            <div className="transition-all duration-300 hover:scale-110">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Users className="h-6 w-6 text-accent" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">500+</div>
-              <div className="text-sm text-white/80">Students Placed</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">{studentCount}+</div>
+              <div className="text-sm md:text-base text-white/80">Students Placed</div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
+            <div className="transition-all duration-300 hover:scale-110">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <MapPin className="h-6 w-6 text-accent" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">25+</div>
-              <div className="text-sm text-white/80">Countries</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">{countryCount}+</div>
+              <div className="text-sm md:text-base text-white/80">Countries</div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 col-span-2 md:col-span-1">
+            <div className="transition-all duration-300 hover:scale-110 col-span-2 md:col-span-1">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Award className="h-6 w-6 text-accent" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">98%</div>
-              <div className="text-sm text-white/80">Success Rate</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">{successRate}%</div>
+              <div className="text-sm md:text-base text-white/80">Success Rate</div>
             </div>
           </div>
 

@@ -45,10 +45,14 @@ const Header = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-primary font-bold text-lg md:text-xl leading-tight">
+              <span className={`font-bold text-lg md:text-xl leading-tight transition-colors ${
+                isScrolled ? "text-primary" : "text-white"
+              }`}>
                 EduGlobal
               </span>
-              <span className="text-xs text-muted-foreground italic hidden sm:block">
+              <span className={`text-xs italic hidden sm:block transition-colors ${
+                isScrolled ? "text-muted-foreground" : "text-white/70"
+              }`}>
                 Your Gateway to Success
               </span>
             </div>
@@ -60,10 +64,14 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors relative group"
+                className={`font-medium transition-colors relative group ${
+                  isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white"
+                }`}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                  isScrolled ? "bg-accent" : "bg-white"
+                }`}></span>
               </a>
             ))}
             <Button className="bg-gradient-to-r from-accent to-accent-light hover:shadow-xl transition-all duration-300">
@@ -74,7 +82,9 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center text-foreground hover:text-primary transition-colors"
+            className={`md:hidden relative w-10 h-10 flex items-center justify-center transition-colors ${
+              isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-white/80"
+            }`}
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
