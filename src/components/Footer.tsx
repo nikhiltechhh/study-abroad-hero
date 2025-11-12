@@ -100,7 +100,7 @@ const Footer = () => {
             <p className="text-sm text-gray-400 leading-relaxed">
               Your trusted partner in international education. We help students achieve their dreams of studying abroad with expert guidance and comprehensive support.
             </p>
-            <div className="flex space-x-2 pt-2">
+            {/* <div className="flex space-x-2 pt-2">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
                 return (
@@ -114,7 +114,7 @@ const Footer = () => {
                   </a>
                 );
               })}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

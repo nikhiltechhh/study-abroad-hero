@@ -140,12 +140,20 @@ const Services = () => {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl">
+            <button
+              onClick={() => window.open("https://forms.gle/df4Y4wG7yZ2ChV9X9", "_blank")}
+              className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl"
+            >
               Get Started Today
             </button>
-            <button className="px-8 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl">
+
+            <button
+              onClick={() => window.open("https://forms.gle/eLWzUmkXFB1YWdQ69", "_blank")}
+              className="px-8 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl"
+            >
               Schedule Consultation
             </button>
+
           </div>
         </div>
       </div>

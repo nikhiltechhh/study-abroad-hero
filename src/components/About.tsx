@@ -59,9 +59,9 @@ const About = () => {
               </div>
             </div>
 
-            <button className="mt-6 px-8 py-3 bg-[#143C6E] text-white font-semibold rounded-lg hover:bg-[#0f2f56] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            {/* <button className="mt-6 px-8 py-3 bg-[#143C6E] text-white font-semibold rounded-lg hover:bg-[#0f2f56] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Learn More About Us
-            </button>
+            </button> */}
           </div>
 
           {/* Image/Visual Element */}

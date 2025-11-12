@@ -585,7 +585,7 @@ const Blog = () => {
         )}
 
         {/* Newsletter Section */}
-        <div className="mt-16 bg-gradient-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
+        {/* <div className="mt-16 bg-gradient-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Our Newsletter</h2>
             <p className="opacity-90 mb-8">Get the latest articles, visa updates, and study abroad tips delivered to your inbox weekly.</p>
@@ -600,7 +600,7 @@ const Blog = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

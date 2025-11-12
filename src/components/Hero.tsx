@@ -114,19 +114,23 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button
-                size="lg"
-                className="bg-accent hover:bg-accent-light text-white shadow-2xl hover:shadow-accent/50 transition-all duration-300 text-base md:text-lg px-8 py-6 group"
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              size="lg"
+              onClick={() => window.open("https://forms.gle/df4Y4wG7yZ2ChV9X9", "_blank")}
+              className="bg-accent hover:bg-accent-light text-white shadow-2xl hover:shadow-accent/50 transition-all duration-300 text-base md:text-lg px-8 py-6 group"
+            >
+              Start Your Journey
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+
               <Button
                 size="lg"
                 variant="outline"
+                onClick={() => window.open("https://forms.gle/eLWzUmkXFB1YWdQ69", "_blank")}
                 className="border-2 border-white text-white bg-white/5 hover:bg-white hover:text-primary transition-all duration-300 text-base md:text-lg px-8 py-6 backdrop-blur-sm"
               >
                 Book Free Consultation
               </Button>
+
             </div>
 
             {/* Stats Section */}
