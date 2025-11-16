@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhatsAppFloat = () => {
   // Replace with your actual WhatsApp number (include country code without + or spaces)
-  const phoneNumber = "1234567890"; // Example: "919876543210" for India
+  const phoneNumber = "+917382616644"; // Example: "919876543210" for India
   const message = "Hello! I'm interested in your services."; // Pre-filled message
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
